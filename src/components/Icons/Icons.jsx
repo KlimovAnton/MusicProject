@@ -9,7 +9,7 @@ import './Icons.css';
 export default function Icons () {
     return (
       <div className={css.container}>
-        <IconContext.Provider value={{ size: '30px', className: 'contactIcon' }}>
+        <IconContext.Provider value={{ size: '25px', className: 'contactIcon' }}>
         <a href="https://www.youtube.com/" target="_blank" className={css.contactIcon}>
           <IoLogoYoutube />
         </a>

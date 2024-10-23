@@ -2,6 +2,7 @@ import './App.css';
 import Layout from '../Layout/Layout';
 import { lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
+import Home from '../../pages/Home/Home';
 
 function App() {
 
@@ -9,7 +10,7 @@ function App() {
       <Layout>
         <Suspense fallback={<div>Please wait, page is making</div>}>
           <Routes>
-            <Route path="/" element={<div>Home</div>}/>
+            <Route path="/" element={<Home />}/>
             <Route path="/about" element={<div>About</div>}/>
             <Route path="/price" element={<div>Price</div>}/>
             <Route path="/video" element={<div>Video</div>}/>
