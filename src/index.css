@@ -15,6 +15,31 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  --basic-dark-blue: #323f47;
+  --transition-delay: 250ms;
+  --transition: cubic-bezier(0.14, 0.57, 0.97, 0.39);
+
+  --white: #ffffff;
+  --light-gray: #f0eff4;
+  --yellow: #fec90c;
+  --hover-green: #87d28d;
+  --light-dark: #323f47;
+  --dark: #2f2f2f;
+  --error-color: #ef5050;
+  --text-grey-white: #2f2f2f99;
+  --calendar-item-bcg: #323f4733;
+
+
+
+  --input-border-inactive-color: rgba(47, 47, 47, 0.2);
+  --input-border-activated-color: rgba(47, 47, 47, 0.6);
+  --input-text-inactive-color: rgba(47, 47, 47, 0.6);
+
+  --signin-btn-disabled-color: rgba(47, 47, 47, 0.2);
+
+  --calendar-button-grey-backhround: rgba(50, 63, 71, 0.2);
 }
 
 ::-webkit-scrollbar {

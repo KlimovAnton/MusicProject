@@ -1,4 +1,4 @@
 .logo {
-    color:#fec90c;
+    color: var(--yellow);
     height: 40px;
 }
