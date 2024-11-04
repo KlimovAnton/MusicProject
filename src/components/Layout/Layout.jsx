@@ -1,17 +1,15 @@
 import css from "./Layout.module.css";
-import Navigation from "../Navigation/Navigation";
-import Icons from "../Icons/Icons";
-import Logo from "../Logo/Logo";
+import AppBar from "../AppBar/AppBar";
+
+import { Suspense } from "react";
 
 export default function Layout ({ children }) {
   return (
-    <div className={css.container}>
-        <header className={css.header}>
-          <Logo />
-          <Navigation />
-          <Icons />
-        </header>
-        {children}
-    </div>
+      <div className={css.container}>
+          <AppBar />
+          <main>
+            <Suspense fallback={<div></div>}>{children}</Suspense>
+          </main>
+      </div>
   )
 }

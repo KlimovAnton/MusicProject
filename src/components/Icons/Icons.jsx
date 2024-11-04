@@ -10,7 +10,7 @@ export default function Icons () {
     return (
       <div className={css.container}>
         <IconContext.Provider value={{ size: '25px', className: 'contactIcon' }}>
-        <a href="https://www.youtube.com/" target="_blank" className={css.contactIcon}>
+        <a href="https://www.youtube.com/channel/UCzy0p4WsUh8Zd12oliF6M3w" target="_blank" className={css.contactIcon}>
           <IoLogoYoutube />
         </a>
         <a href="https://www.instagram.com/klimov.music/" target="_blank" className={css.contactIcon}>

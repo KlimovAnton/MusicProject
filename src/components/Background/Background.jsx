@@ -4,7 +4,7 @@ import css from './Background.module.css'
 export default function Background () {
     return (
         <div className={css.background}>
-            <video src={videoBg} autoPlay loop muted/>
+            <video src={videoBg} autoPlay loop muted className={css.overlay}/>
         </div>
     )
 }

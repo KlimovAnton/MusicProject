@@ -1,7 +1,5 @@
-.header {
-    border-bottom: 2px solid rgb(49, 110, 222);
-    margin-bottom: 15px;
+.container {
+    min-height: 100vh;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
 }
