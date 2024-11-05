@@ -3,7 +3,7 @@
 }
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: PFRegalDisplayProMedium,Georgia,"Times New Roman",Times,serif;
   line-height: 1.5;
   font-weight: 400;
   font-size: 18px;
@@ -22,7 +22,7 @@
   --transition: cubic-bezier(0.14, 0.57, 0.97, 0.39);
 
   --white: #ffffff;
-  --light-gray: #f0eff4;
+  --light-gray: #fafafa66;
   --yellow: #fec90c;
   --hover-green: #87d28d;
   --light-dark: #323f47;
