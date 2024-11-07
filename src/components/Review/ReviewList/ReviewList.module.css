@@ -1,0 +1,12 @@
+.wrapper {
+    width: 100%;
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+}
+
+.item {
+    width: 332px;
+}
