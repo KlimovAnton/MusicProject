@@ -7,22 +7,26 @@ export default function Information () {
             <div className="container">
                 <div className={css.container}>
                     <div className={css.containerText}>
-                        <h4>I'm Anton Klimov - pianist</h4>
-                        <p>
-                        I've been making music for 22 years.
+                        <h4 className={css.title}>Anton Klimov - Professional Pianist</h4>
+                        <p className={css.text}>
+                        I have been making music for 22 years.
                         During this time I managed to:
-                            <ul>
-                                <li>Performed 10+ solo musical concerts</li>
-                                <li>Participated in 150+ events</li>
-                                <li>Joined an orchestra at 30+ festivals</li>
+                            <ul className={css.list}>
+                                <li className={css.item}>Performed 10+ solo musical concerts</li>
+                                <li className={css.item}>Participated in 150+ events</li>
+                                <li className={css.item}>Joined an orchestra at 30+ festivals</li>
                             </ul>
                         </p>
                     </div>
                     <div className={css.containerButton}>
-                        <p>
-                        Мusic with soul</p>
-                        <p className={css.width}>Вы можете пригласить нас в любом городе по Крыму, Симферополь, Севастополь, Ялта, Алушта, Евпатория, Судак, Керчь, Черноморское, Феодосия, ;мы выезжаем по Крыму, на свадьбу, концерт, праздник, эвент мероприятие с хорошим звучанием и зрелищным шоу.
-
+                        <h4 className={css.title}>
+                        Мusic with soul
+                        </h4>
+                        <p className={css.text}>
+                        You can invite me to any city in Europe. 
+                        I am based in Vienna, but 
+                        I am ready to come to any place to brighten your event 
+                        with pleasant music and make it memorable.
                         </p>
                         <Button>Contact me</Button>
                     </div>

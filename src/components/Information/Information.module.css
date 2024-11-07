@@ -8,15 +8,32 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    width: 40%;
 }
 
 .containerButton {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    text-align: center;
+    text-align: center; 
+    width: 40%;
 }
 
-.width {
-    width: 50%;
+.list {
+    list-style: circle inside;
+}
+
+.item {
+    color: #D98324;
+}
+
+.title {
+    font-size: 30px;
+}
+
+.text {
+    color: var(--light-gray);
 }

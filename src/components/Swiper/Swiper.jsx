@@ -22,26 +22,29 @@ export default function Swiperr () {
         <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={15}
-        slidesPerView={5}
+        slidesPerView={2}
         slidesPerGroup={1}
         speed={400}
         touchAngle={30}
         preventClicks={true}
         navigation={true}
+        style={{
+          "--swiper-navigation-color": "#fec90c"
+      }}
         resistanceRatio={0.1}
         breakpoints={{
-          768: { slidesPerView: 4.25, slidesPerGroup: 4 },
-          980: { slidesPerView: 5.25, slidesPerGroup: 5 },
-          1280: { slidesPerView: 5, slidesPerGroup: 5, spaceBetween: 20, speed: 900 },
+          768: { slidesPerView: 4.25, slidesPerGroup: 1 },
+          980: { slidesPerView: 5.25, slidesPerGroup: 1 },
+          1280: { slidesPerView: 5, slidesPerGroup: 1, spaceBetween: 20, speed: 900 },
         }}>
-        <SwiperSlide><img src={img1} alt="photo-concerts" width="250px" height="300px"/></SwiperSlide>
-        <SwiperSlide><img src={img2} alt="photo-concerts" width="250px" height="300px"/></SwiperSlide>
-        <SwiperSlide><img src={img3} alt="photo-concerts" width="250px" height="300px"/></SwiperSlide>
-        <SwiperSlide><img src={img4} alt="photo-concerts" width="250px" height="300px"/></SwiperSlide>
-        <SwiperSlide><img src={img5} alt="photo-concerts" width="250px" height="300px"/></SwiperSlide>
-        <SwiperSlide><img src={img6} alt="photo-concerts" width="250px" height="300px"/></SwiperSlide>
-        <SwiperSlide><img src={img7} alt="photo-concerts" width="250px" height="300px"/></SwiperSlide>
-        <SwiperSlide><img src={img8} alt="photo-concerts" width="250px" height="300px"/></SwiperSlide>
+          <SwiperSlide><img src={img1} alt="photo-concerts" width="300px" height="300px"/></SwiperSlide>
+          <SwiperSlide><img src={img2} alt="photo-concerts" width="300px" height="300px"/></SwiperSlide>
+          <SwiperSlide><img src={img3} alt="photo-concerts" width="300px" height="300px"/></SwiperSlide>
+          <SwiperSlide><img src={img4} alt="photo-concerts" width="300px" height="300px"/></SwiperSlide>
+          <SwiperSlide><img src={img5} alt="photo-concerts" width="300px" height="300px"/></SwiperSlide>
+          <SwiperSlide><img src={img6} alt="photo-concerts" width="300px" height="300px"/></SwiperSlide>
+          <SwiperSlide><img src={img7} alt="photo-concerts" width="300px" height="300px"/></SwiperSlide>
+          <SwiperSlide><img src={img8} alt="photo-concerts" width="300px" height="300px"/></SwiperSlide>
         </Swiper>
       </div>
   );
