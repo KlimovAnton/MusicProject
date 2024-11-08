@@ -1,0 +1,37 @@
+.footer {
+    background-color: #000000;
+    bottom: 0px;
+    border-top: 2px solid var(--yellow);
+}
+
+.container {
+    display: flex;
+    min-width: 320px;
+    max-width: 375px;
+    padding: 5px 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+      max-width: 768px;
+    }
+  }
+  
+  @media screen and (min-width: 1280px) {
+    .container {
+      max-width: 1260px;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+.containerText {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 50px;
+}

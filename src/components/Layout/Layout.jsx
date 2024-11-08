@@ -1,5 +1,6 @@
 import css from "./Layout.module.css";
 import AppBar from "../AppBar/AppBar";
+import Footer from "../Footer/footer";
 
 import { Suspense } from "react";
 
@@ -10,6 +11,7 @@ export default function Layout ({ children }) {
           <main>
             <Suspense fallback={<div></div>}>{children}</Suspense>
           </main>
+          <Footer />
       </div>
   )
 }
