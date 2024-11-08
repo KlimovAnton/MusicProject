@@ -37,14 +37,14 @@ export default function Swiperr () {
           980: { slidesPerView: 5.25, slidesPerGroup: 1 },
           1280: { slidesPerView: 5, slidesPerGroup: 1, spaceBetween: 20, speed: 900 },
         }}>
-          <SwiperSlide><img src={img1} alt="photo-concerts" width="300px" height="300px"/></SwiperSlide>
-          <SwiperSlide><img src={img2} alt="photo-concerts" width="300px" height="300px"/></SwiperSlide>
-          <SwiperSlide><img src={img3} alt="photo-concerts" width="300px" height="300px"/></SwiperSlide>
-          <SwiperSlide><img src={img4} alt="photo-concerts" width="300px" height="300px"/></SwiperSlide>
-          <SwiperSlide><img src={img5} alt="photo-concerts" width="300px" height="300px"/></SwiperSlide>
-          <SwiperSlide><img src={img6} alt="photo-concerts" width="300px" height="300px"/></SwiperSlide>
-          <SwiperSlide><img src={img7} alt="photo-concerts" width="300px" height="300px"/></SwiperSlide>
-          <SwiperSlide><img src={img8} alt="photo-concerts" width="300px" height="300px"/></SwiperSlide>
+          <SwiperSlide key="1"><img src={img1} alt="photo-concerts" width="300px" height="300px"/></SwiperSlide>
+          <SwiperSlide key="2"><img src={img2} alt="photo-concerts" width="300px" height="300px"/></SwiperSlide>
+          <SwiperSlide key="3"><img src={img3} alt="photo-concerts" width="300px" height="300px"/></SwiperSlide>
+          <SwiperSlide key="4"><img src={img4} alt="photo-concerts" width="300px" height="300px"/></SwiperSlide>
+          <SwiperSlide key="5"><img src={img5} alt="photo-concerts" width="300px" height="300px"/></SwiperSlide>
+          <SwiperSlide key="6"><img src={img6} alt="photo-concerts" width="300px" height="300px"/></SwiperSlide>
+          <SwiperSlide key="7"><img src={img7} alt="photo-concerts" width="300px" height="300px"/></SwiperSlide>
+          <SwiperSlide key="8"><img src={img8} alt="photo-concerts" width="300px" height="300px"/></SwiperSlide>
         </Swiper>
       </div>
   );
