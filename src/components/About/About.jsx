@@ -1,6 +1,6 @@
 import css from './About.module.css';
 import AboutLink from './AboutLink/AboutLink';
-import AboutMe from './AboutMe/Aboutme';
+import AboutMe from './AboutMe/AboutMe';
 
 export default function About () {
     return (
