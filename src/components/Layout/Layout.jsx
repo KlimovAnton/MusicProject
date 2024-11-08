@@ -1,6 +1,6 @@
 import css from "./Layout.module.css";
 import AppBar from "../AppBar/AppBar";
-import Footer from "../Footer/footer";
+import Footer from "../Footer/Footer";
 
 import { Suspense } from "react";
 
