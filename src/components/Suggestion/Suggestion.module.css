@@ -23,19 +23,19 @@
 
 .position:hover .title{
     font-size: 40px;
-    transition: 0.6s;
 }
 
 .position:hover .text{
     font-size: 28px;
-    transition: 0.6s;
 }
 .title {
     font-size: 30px;
     color: #fafafa;
+    transition: 0.6s;
 }
 
 .text {
     font-size: 24px;
-    color: var(--light-gray)
+    color: var(--light-gray);
+    transition: 0.6s;
 }

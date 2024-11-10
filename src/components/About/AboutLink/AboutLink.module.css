@@ -10,6 +10,10 @@
     position: relative;
 }
 
+.item:hover .text {
+  font-size: 50px;
+}
+
 .img {
     width: 100%;
     height: 850px;
