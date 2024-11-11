@@ -16,7 +16,7 @@ export default function Navigation () {
           About
         </NavLink>
         <NavLink to="/price" className={getNavLinkClass}>
-          Price
+          Prices
         </NavLink>
         <NavLink to="/video" className={getNavLinkClass}>
           Video
@@ -25,7 +25,7 @@ export default function Navigation () {
           Gallery
         </NavLink>
         <NavLink to="/contacts" className={getNavLinkClass}>
-          Contacts
+          Contact
         </NavLink>
     </nav>
   )

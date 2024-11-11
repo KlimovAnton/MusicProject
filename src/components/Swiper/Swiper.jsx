@@ -1,14 +1,14 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 
-import img1 from '../../assets/beach-photo-2.jpg';
-import img2 from '../../assets/beach-photo-3.jpg';
-import img3 from '../../assets/beach-photo-4.jpg';
-import img4 from '../../assets/beach-photo-5.jpg';
-import img5 from '../../assets/beach-photo-6.jpg';
-import img6 from '../../assets/photo_2024-11-05_08-20-22 (7).jpg';
-import img7 from '../../assets/wine-photo.jpg';
-import img8 from '../../assets/royal-photo.jpg';
+import img1 from '../../assets/swiper/beach-photo-6.jpg';
+import img2 from '../../assets/swiper/BEBDE289-6610-404F-8AEC-C400CCCACE7B.jpg';
+import img3 from '../../assets/swiper/photo_2024-11-06_09-00-58.jpg';
+import img4 from '../../assets/swiper/photo_2024-11-06_09-00-59.jpg';
+import img5 from '../../assets/swiper/photo_2024-11-06_09-00-60.jpg';
+import img6 from '../../assets/swiper/photo_2024-11-06_09-00-61.jpg';
+import img7 from '../../assets/swiper/wine-photo-2.jpg';
+import img8 from '../../assets/swiper/wine-photo.jpg';
 
 import css from './Swiper.module.css';
 import 'swiper/css';
@@ -37,14 +37,14 @@ export default function Swiperr () {
           980: { slidesPerView: 5.25, slidesPerGroup: 1 },
           1280: { slidesPerView: 5, slidesPerGroup: 1, spaceBetween: 20, speed: 900 },
         }}>
-          <SwiperSlide><img src={img1} alt="photo-concerts" width="300px" height="300px"/></SwiperSlide>
           <SwiperSlide><img src={img2} alt="photo-concerts" width="300px" height="300px"/></SwiperSlide>
-          <SwiperSlide><img src={img3} alt="photo-concerts" width="300px" height="300px"/></SwiperSlide>
           <SwiperSlide><img src={img4} alt="photo-concerts" width="300px" height="300px"/></SwiperSlide>
+          <SwiperSlide><img src={img3} alt="photo-concerts" width="300px" height="300px"/></SwiperSlide>
+          <SwiperSlide><img src={img8} alt="photo-concerts" width="300px" height="300px"/></SwiperSlide>
           <SwiperSlide><img src={img5} alt="photo-concerts" width="300px" height="300px"/></SwiperSlide>
           <SwiperSlide><img src={img6} alt="photo-concerts" width="300px" height="300px"/></SwiperSlide>
           <SwiperSlide><img src={img7} alt="photo-concerts" width="300px" height="300px"/></SwiperSlide>
-          <SwiperSlide><img src={img8} alt="photo-concerts" width="300px" height="300px"/></SwiperSlide>
+          <SwiperSlide><img src={img1} alt="photo-concerts" width="300px" height="300px"/></SwiperSlide>
         </Swiper>
       </div>
   );

@@ -12,9 +12,9 @@ export default function Information () {
                         I have been making music for 22 years.
                         During this time I managed to:
                             <ul className={css.list}>
-                                <li className={css.item}>Performed 10+ solo musical concerts</li>
-                                <li className={css.item}>Participated in 150+ events</li>
-                                <li className={css.item}>Joined an orchestra at 30+ festivals</li>
+                                <li className={css.item}>Perform 10+ solo musical concerts</li>
+                                <li className={css.item}>Participate in 150+ events</li>
+                                <li className={css.item}>Join an orchestra at 30+ festivals</li>
                             </ul>
                         </div>
                     </div>
