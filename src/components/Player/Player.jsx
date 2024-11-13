@@ -7,29 +7,29 @@ export default function Player() {
         <div className={css.container}>
             <ReactPlayer
                 url={`https://www.youtube.com/watch?v=p1kbQIVgFng`}
-                controls={true}
-                className='react-player'
+                controls={false}
+                width={"608px"}
+                height={"342px"}
+            />
+            <ReactPlayer
+                url={`https://www.youtube.com/watch?v=o8DMm7E_Adc`}
+                controls={false}
+                width={"608px"}
+                height={"342px"}
+            />
+            <ReactPlayer
+                url={`https://www.youtube.com/watch?v=P1DqCFAlDTY`}
+                controls={false}
                 width={"608px"}
                 height={"342px"}
             />
             <ReactPlayer
                 url={`https://www.youtube.com/watch?v=y_NhP13YpDU`}
-                controls={true}
+                controls={false}
                 width={"608px"}
                 height={"342px"}
             />
-            <ReactPlayer
-                url={`https://www.youtube.com/watch?v=7ID5Hto7JeU`}
-                controls={true}
-                width={"608px"}
-                height={"342px"}
-            />
-            <ReactPlayer
-                url={`  https://www.youtube.com/shorts/1mhrpVFAtdo`}
-                controls={true}
-                width={"608px"}
-                height={"342px"}
-            />
+            
         </div>
     );
   }
