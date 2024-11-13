@@ -14,10 +14,10 @@ export default function AboutLink () {
                 </Link>
             </li>
             <li className={css.item}>
-                <Link to="/video">
+                <Link to="/price">
                     <div className={css.overlay}></div>
                     <img className={css.img} src={img2} alt="photo-own-music"/>
-                    <p className={css.text}>My own music</p>
+                    <p className={css.text}>Prices</p>
                 </Link>
             </li>
         </ul>
