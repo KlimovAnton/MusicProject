@@ -8,7 +8,7 @@ import { MdLocalPhone } from "react-icons/md";
 export default function ContactInformation () {
     return (
         <div className={css.formInformation}>
-            <h2>Have a quastion?</h2>
+            <h2>Have a question?</h2>
             <p>I'm here to help! Fill out the form or reach me via email or phone. 
                 I'm available to help you get the best experience.
                 I will contact you as soon as possible. Please allow 24 hours during the business hours for a reply.

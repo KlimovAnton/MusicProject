@@ -19,7 +19,7 @@ export default function Icons () {
         <a href="https://t.me/AntonRumataa" target="_blank" className={css.contactIcon}>
           <FaTelegramPlane />
         </a>
-        <a href="#" target="_blank" className={css.contactIcon}>
+        <a href="https://wa.me/4367762014408" target="_blank" className={css.contactIcon}>
           <FaSquareWhatsapp />
         </a>
         <a href="https://www.facebook.com/share/Qmrrc2ti47EZrHvU/?mibextid=LQQJ4d" target="_blank" className={css.contactIcon}>
