@@ -6,12 +6,14 @@ export default function PriceItem () {
     return (
         <div className={css.wrapperProgram}>
             <div className={css.containerProgram}>
-                <h3 className={css.titleProgram}>Express - 100 Euro</h3>
-                <p className={css.textProgram}>An hour long program for your celebration format.</p>
+                <h3 className={css.titleProgram}>Express - 150 Euro</h3>
+                <p className={css.textProgram}>Suitable for events with a musical welcome zone, musical accompaniment of marriage proposals, birthday surprise.</p>
                 <ul className={css.listProgram}>
-                    <li className={css.itemProgram}>1 lounge block – 60 minutes</li>
+                    <li className={css.itemProgram}>1 lounge block – 45 minutes</li>
                     <li className={css.itemProgram}>Consulting on audio equipment</li>
-                    <li className={css.itemProgram}>Total time on site does not exceed two hours.</li>
+                    <li className={css.itemProgram}>Consulting on performance venue</li>
+                    <li className={css.itemProgram}>Location: Austria, Vienna</li>
+                    <li className={css.itemProgram}>Total time on site does not exceed <b>90 minutes</b>.</li>
                 </ul>
                 <Button>Contact me</Button>
             </div>

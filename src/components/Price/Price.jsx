@@ -13,6 +13,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 export default function Price () {
+
     return (
         <section className='section'>
             <div className='container'>
@@ -20,6 +21,7 @@ export default function Price () {
                     <PriceText />
                     <div className={css.container}>
                         <Swiper
+                        initialSlide={1}
                         modules={[Navigation, Pagination, Scrollbar, A11y]}
                         slidesPerView={1}
                         slidesPerGroup={1}
