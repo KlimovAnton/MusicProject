@@ -5,9 +5,21 @@
     gap: 25px;
 }
 
+@media screen and (max-width: 1279px) {
+  .list {
+    flex-direction: column;
+  }
+}
+
 .item {
     width: 50%;
     position: relative;
+}
+
+@media screen and (max-width: 1279px) {
+  .item {
+    width: 100%;
+  }
 }
 
 .item:hover .text {
@@ -35,6 +47,12 @@
   transition: 0.6s;
   font-size: 40px;
   color: #fafafa;
+}
+
+@media screen and (max-width: 1279px) {
+  .text {
+    opacity: 1;
+  }
 }
 
 .text:hover {

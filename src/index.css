@@ -95,8 +95,20 @@ img {
 }
 
 .section {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   margin-top: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .section {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .section {
+    margin-bottom: 30px;
+  }
 }
 
 .container {

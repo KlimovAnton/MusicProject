@@ -3,7 +3,7 @@ import Button from "../Button/Button";
 
 export default function Hero () {
     return (
-        <section>
+        <>
             <div className={css.overlay}></div> 
             <div className={css.container}>
                 <h4 className={css.mainTitle}>Wedding of your dreams</h4>
@@ -12,6 +12,6 @@ export default function Hero () {
                 </p>
                 <Button>Contact me</Button>
             </div>
-        </section>
+        </>
     )
 }

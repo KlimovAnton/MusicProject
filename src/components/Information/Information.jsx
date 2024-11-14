@@ -19,9 +19,7 @@ export default function Information () {
                         </div>
                     </div>
                     <div className={css.containerButton}>
-                        <h4 className={css.title}>
-                        Мusic with soul
-                        </h4>
+                        <h4 className={css.title}>Мusic with soul</h4>
                         <div className={css.text}>
                         You can invite me to any city in Europe. 
                         I am based in Vienna, but 
