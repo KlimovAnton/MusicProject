@@ -124,3 +124,69 @@ img {
     justify-content: space-between;
   }
 }
+
+.swiper .swiper-button-prev::after,
+.swiper .swiper-button-next::after {
+  color: #f7f6f1;
+  font-size: 28px;
+  background-color: rgba(26, 26, 26, 0.5);
+  padding: 20px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  border: solid 1px rgb(247, 246, 241, 0.7);
+  transition: color 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.swiper .swiper-button-prev:hover::after,
+.swiper .swiper-button-next:hover::after {
+  color: #fec90c;
+}
+
+.swiper {
+  --swiper-theme-color: transparent;
+  --swiper-pagination-bottom: 25px;
+}
+
+.swiper .swiper-pagination {
+  position: relative;
+  display: flex;
+  margin-bottom: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper .swiper-pagination-bullet {
+  width: 11px;
+  height: 11px;
+  border: solid 2px #fec90c;
+}
+
+@media screen and (max-width: 767px) {
+  :root {
+    font-size: 16px;
+  }
+
+  .swiper .swiper-pagination {
+    margin-bottom: 35px;
+  }
+
+  .swiper .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  a {
+    font-weight: 600;
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .swiper .swiper-button-prev,
+  .swiper .swiper-button-next {
+    display: none;
+  }
+}
