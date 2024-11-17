@@ -1,8 +1,12 @@
 import css from './PriceItem2.module.css';
 import Button from '../../Button/Button';
 import img from '../../../assets/swiper/beach-photo-6.jpg';
+import { useMedia } from 'react-use';
 
 export default function PriceItem2 () {
+
+    const isDesktop = useMedia("(min-width: 1280px)");
+
     return (
         <div className={css.wrapperProgram}>
             <div className={css.containerProgram}>
@@ -16,14 +20,14 @@ export default function PriceItem2 () {
                     <li className={css.itemProgram}>Consulting on audio equipment</li>
                     <li className={css.itemProgram}>Consulting on performance venue</li>
                     <li className={css.itemProgram}>Location: Austria, Vienna</li>
-                    <li className={css.itemProgram}>Location: within 250 km from Vienna (charged separately)</li>
+                    <li className={css.itemProgram}>Location: within 250 km from Vienna <br/> (charged separately)</li>
                     <li className={css.itemProgram}>Total time on site does not exceed <b>three hours</b>.</li>
                 </ul>
                 <Button>Contact me</Button>
             </div>
-            <div className={css.img}>
+            {isDesktop && <div className={css.img}>
                 <img className={css.picture} src={img} alt="photo-concerts"/>
-            </div>
+            </div>}
         </div>
     )
 }

@@ -34,13 +34,13 @@ export default function Price () {
                     }}
                         resistanceRatio={0.1}
                         breakpoints={{
-                        768: { slidesPerView: 1, slidesPerGroup: 1 },
-                        980: { slidesPerView: 1, slidesPerGroup: 1 },
-                        1280: { slidesPerView: 1, slidesPerGroup: 1, spaceBetween: 20, speed: 900 },
+                            768: { slidesPerView: 1, slidesPerGroup: 1},
+                            980: { slidesPerView: 1, slidesPerGroup: 1, spaceBetween: 20 },
+                            1280: { slidesPerView: 1, slidesPerGroup: 1, spaceBetween: 20, speed: 900 },
                         }}>
-                            <SwiperSlide><PriceItem /></SwiperSlide>
-                            <SwiperSlide><PriceItem2 /></SwiperSlide>
-                            <SwiperSlide><PriceItem3 /></SwiperSlide>
+                            <SwiperSlide><PriceItem className={css.item}/></SwiperSlide>
+                            <SwiperSlide><PriceItem2 className={css.item}/></SwiperSlide>
+                            <SwiperSlide><PriceItem3 className={css.item}/></SwiperSlide>
                         </Swiper>
                     </div>
                 </div>

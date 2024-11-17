@@ -16,6 +16,22 @@
     gap: 20px;
 }
 
+@media screen and (max-width: 1279px) {
+    .containerProgram {
+        border-radius: 24px;
+        width: 550px;
+        height: 100%;
+        gap: 47px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .containerProgram {
+        padding: 20px 0;
+        gap: 54px;
+    }
+}
+
 .img {
     width: 50%;
     padding: 37px 120px;

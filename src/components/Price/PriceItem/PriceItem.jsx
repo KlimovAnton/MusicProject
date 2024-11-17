@@ -2,7 +2,12 @@ import css from './PriceItem.module.css';
 import Button from '../../Button/Button';
 import img from '../../../assets/swiper/BEBDE289-6610-404F-8AEC-C400CCCACE7B.jpg';
 
+import { useMedia } from 'react-use';
+
 export default function PriceItem () {
+
+    const isDesktop = useMedia("(min-width: 1280px)");
+
     return (
         <div className={css.wrapperProgram}>
             <div className={css.containerProgram}>
@@ -17,9 +22,9 @@ export default function PriceItem () {
                 </ul>
                 <Button>Contact me</Button>
             </div>
-            <div className={css.img}>
+            {isDesktop && <div className={css.img}>
                 <img className={css.picture} src={img} alt="photo-concerts"/>
-            </div>
+            </div>}
         </div>
     )
 }
