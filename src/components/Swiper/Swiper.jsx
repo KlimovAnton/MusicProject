@@ -35,7 +35,7 @@ export default function Swiperr () {
         resistanceRatio={0.1}
         breakpoints={{
           0: { slidesPerView: 1, slidesPerGroup: 1 },
-          768: { slidesPerView: 2, slidesPerGroup: 1 },
+          768: { slidesPerView: 2.5, slidesPerGroup: 1 },
           1280: { slidesPerView: 5, slidesPerGroup: 1, spaceBetween: 20, speed: 900 },
         }}>
           <SwiperSlide><img src={img2} alt="photo-concerts" width="300px" height="300px"/></SwiperSlide>

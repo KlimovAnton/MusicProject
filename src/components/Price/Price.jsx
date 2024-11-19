@@ -36,7 +36,7 @@ export default function Price () {
                         resistanceRatio={0.1}
                         breakpoints={{
                             0: { slidesPerView: 1, slidesPerGroup: 1},
-                            768: { slidesPerView: 1, slidesPerGroup: 1, spaceBetween: 20 },
+                            768: { slidesPerView: 1, slidesPerGroup: 1, spaceBetween: 20, speed: 800 },
                             1280: { slidesPerView: 1, slidesPerGroup: 1, spaceBetween: 20, speed: 900 },
                         }}>
                             <SwiperSlide><PriceItem className={css.item}/></SwiperSlide>

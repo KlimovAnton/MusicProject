@@ -19,14 +19,14 @@
 @media screen and (max-width: 1279px) {
     .containerProgram {
         border-radius: 24px;
-        width: 550px;
         height: 100%;
-        gap: 47px;
+        gap: 56px;
     }
 }
 
 @media screen and (max-width: 767px) {
     .containerProgram {
+        width: 100%;
         padding: 30px 0;
         gap: 54px;
     }

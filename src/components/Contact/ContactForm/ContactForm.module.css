@@ -16,7 +16,7 @@
 
 @media screen and (max-width: 1279px) {
     .containerForm {
-        width: 708px;
+        width: 90%;
         border-radius: 0 0 24px 24px;
         padding: 30px 30px;
         gap: 10px;
