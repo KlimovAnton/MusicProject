@@ -37,7 +37,6 @@ export default function AboutSummary () {
                     <Button>Contact me</Button>
                     </p>
                     </div>
-                    {/* <img src={img} alt="photo-concerts"/> */}
                 </div>
             </div>
         </section>
