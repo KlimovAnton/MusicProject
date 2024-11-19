@@ -21,9 +21,6 @@ export default function Navigation () {
         <NavLink to="/video" className={getNavLinkClass}>
           Video
         </NavLink>
-        <NavLink to="/gallery" className={getNavLinkClass}>
-          Gallery
-        </NavLink>
         <NavLink to="/contacts" className={getNavLinkClass}>
           Contact
         </NavLink>

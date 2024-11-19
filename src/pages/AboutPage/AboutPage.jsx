@@ -9,15 +9,13 @@ import { useMedia } from 'react-use';
 
 export default function AboutPage () {
 
-    const isMobile = useMedia("(max-width: 767px)")
-    const isNonMobile = useMedia("(min-width: 767px)")
-    const isTablet = useMedia("(max-width: 1279px)");
+    const isNonMobile = useMedia("(min-width: 767px)");
     const isDesktop = useMedia("(min-width: 1280px)");
 
     return (
         <>
         <AboutSummary />
-        {isNonMobile && <Review />}
+        <Review />
         {isNonMobile && <Information />}
         {isDesktop && <Suggestion />}
         </>

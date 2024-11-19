@@ -29,13 +29,14 @@ export default function Price () {
                         touchAngle={30}
                         preventClicks={true}
                         navigation={true}
+                        pagination={{clickable: true}}
                         style={{
                         "--swiper-navigation-color": "#fec90c"
                     }}
                         resistanceRatio={0.1}
                         breakpoints={{
-                            768: { slidesPerView: 1, slidesPerGroup: 1},
-                            980: { slidesPerView: 1, slidesPerGroup: 1, spaceBetween: 20 },
+                            0: { slidesPerView: 1, slidesPerGroup: 1},
+                            768: { slidesPerView: 1, slidesPerGroup: 1, spaceBetween: 20 },
                             1280: { slidesPerView: 1, slidesPerGroup: 1, spaceBetween: 20, speed: 900 },
                         }}>
                             <SwiperSlide><PriceItem className={css.item}/></SwiperSlide>

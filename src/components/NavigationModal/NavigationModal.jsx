@@ -22,9 +22,6 @@ export default function NavigationModal({ onClose }) {
         <NavLink to="/video" className={getNavLinkClass} onClick={() => onClose()} >
             Video
         </NavLink>
-        <NavLink to="/gallery" className={getNavLinkClass} onClick={() => onClose()} >
-            Gallery
-        </NavLink>
         <NavLink to="/contacts" className={getNavLinkClass} onClick={() => onClose()} >
             Contact
         </NavLink>
