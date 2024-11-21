@@ -26,7 +26,7 @@ export default function Information () {
                         I am ready to come to any place to brighten your event 
                         with pleasant music and make it memorable.
                         </div>
-                        <Button>Contact me</Button>
+                        <Button></Button>
                     </div>
                 </div>
             </div>

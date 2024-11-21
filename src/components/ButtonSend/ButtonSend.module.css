@@ -23,12 +23,20 @@
     background-color: var(--hover-green);
     color: var(--dark);
   }
-
-  .link {
-    color: var(--dark)
+  
+  .btn:disabled {
+    color: var(--input-border-inactive-color);
+    background-color: var(--light-gray);
+    border: 1px solid var(--input-border-inactive-color);
+    cursor: not-allowed;
   }
-
-  .link:hover,
-  .link:focus {
-    color: var(--dark)
+  .isDisabled {
+    color: var(--input-border-inactive-color);
+    background-color: var(--light-gray);
+    border: 1px solid var(--input-border-inactive-color);
+    cursor: not-allowed;
+  }
+  
+  .btn.isSelected {
+    background-color: green;
   }

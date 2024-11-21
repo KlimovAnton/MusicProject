@@ -25,6 +25,7 @@ export default function HomePage () {
         {isMobile && <PriceMobile />}
         {isNonMobile && <Review />}
         {isTablet && <Information />}
+        {isDesktop && <Information />}
         {isDesktop && <Suggestion />}
     </>
     )

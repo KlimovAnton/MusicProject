@@ -1,32 +1,17 @@
 import css from './Button.module.css';
 import clsx from 'clsx';
+import { NavLink } from "react-router-dom";
 
-const Button = ({
-  children,
-  addClass = '',
-  selected = false,
-  disabled = false,
-  ariaHidden = false,
-  ...otherProps
-}) => {
+export default function Button ({ openModal }) {
+
   return (
     <button
-      aria-label="button"
-      className={clsx(
-        css.btn,
-        {
-          [css.isSelected]: selected,
-          [css.isDisabled]: disabled,
-        },
-        addClass,
-      )}
-      disabled={disabled}
-      aria-hidden={ariaHidden}
-      {...otherProps}
-    >
-      {children}
+      onClick={openModal}
+      type='button'
+      className={css.btn}>
+        <NavLink to="/contacts" className={css.link}>
+          Contact me
+        </NavLink>
     </button>
-  );
-};
-
-export default Button;
+  )
+}

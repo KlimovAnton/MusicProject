@@ -20,7 +20,7 @@ export default function PriceItem () {
                     <li className={css.itemProgram}>Location: Austria, Vienna</li>
                     <li className={css.itemProgram}>Total time on site does not exceed <b>90 minutes</b>.</li>
                 </ul>
-                <Button>Contact me</Button>
+                <Button></Button>
             </div>
             {isDesktop && <div className={css.img}>
                 <img className={css.picture} src={img} alt="photo-concerts"/>

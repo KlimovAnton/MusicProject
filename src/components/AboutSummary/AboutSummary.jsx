@@ -34,7 +34,7 @@ export default function AboutSummary () {
                     <div className={css.button}>
                     <p>
                     Are you interested? Write to me to discuss the details.
-                    <Button>Contact me</Button>
+                    <Button></Button>
                     </p>
                     </div>
                 </div>

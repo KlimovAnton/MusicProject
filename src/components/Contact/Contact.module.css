@@ -30,6 +30,7 @@
     .container {
       flex-direction: row;
       max-width: 1260px;
+      height: 430px;
     }
   }
 

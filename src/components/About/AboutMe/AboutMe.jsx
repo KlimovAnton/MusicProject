@@ -1,5 +1,4 @@
 import css from './AboutMe.module.css';
-import Button from '../../Button/Button';
 
 export default function AboutMe () {
     return (
@@ -14,7 +13,7 @@ export default function AboutMe () {
                 </p>
             </div>
             <div className={css.containerButton}>
-              <Button>+4367762014408</Button>
+              <button className={css.btn} type='button'><a href="https://wa.me/4367762014408" className={css.link} target="_blank">+4367762014408</a></button>
               <p className={css.text}>WhatsApp and Telegram <br/> are available on this number.</p>
             </div>
         </div>

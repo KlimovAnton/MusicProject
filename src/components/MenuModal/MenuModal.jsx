@@ -21,7 +21,7 @@ export default function MenuModal({ isOpen, onClose }) {
       }}
       closeTimeoutMS={500}
       onRequestClose={onClose}>
-      <MobileMenu  onClose={onClose} />
+      <MobileMenu onClose={onClose} />
     </Modal>
   );
 }

@@ -23,7 +23,7 @@ export default function PriceItem2 () {
                     <li className={css.itemProgram}>Location: within 250 km from Vienna <br/> (charged separately)</li>
                     <li className={css.itemProgram}>Total time on site does not exceed <b>three hours</b>.</li>
                 </ul>
-                <Button>Contact me</Button>
+                <Button></Button>
             </div>
             {isDesktop && <div className={css.img}>
                 <img className={css.picture} src={img} alt="photo-concerts"/>

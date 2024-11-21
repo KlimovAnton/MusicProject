@@ -14,7 +14,7 @@ export default function AppBar () {
     const isTablet = useMedia("(max-width: 1279px)");
     const isDesktop = useMedia("(min-width: 1280px)");
     
-    const [isOpen, setIsOpen] =useState(false);
+    const [isOpen, setIsOpen] = useState(false);
 
     const openModal = () => {
         setIsOpen(true);

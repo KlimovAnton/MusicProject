@@ -1,7 +1,10 @@
 import css from "./Hero.module.css";
 import Button from "../Button/Button";
 
+
 export default function Hero () {
+
+
     return (
         <>
             <div className={css.overlay}></div> 
@@ -10,7 +13,7 @@ export default function Hero () {
                 <p className={css.subTitle}>
                 Professional musician for your event in Austria, Slovakia, Czech Republic or other countries
                 </p>
-                <Button>Contact me</Button>
+                <Button></Button>
             </div>
         </>
     )
