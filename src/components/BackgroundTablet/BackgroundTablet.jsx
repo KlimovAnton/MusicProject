@@ -7,7 +7,7 @@ export default function BackgroundTablet () {
             <div className={css.background}>
                 <div className={css.overlay}>
                     <div className={css.container}>
-                        <h4 className={css.mainTitle}>Wedding of your dreams</h4>
+                        <h4 className={css.mainTitle}>Event of your dreams</h4>
                         <p className={css.subTitle}>
                         Professional musician for your event in Austria, Slovakia, Czech Republic or other countries
                         </p>

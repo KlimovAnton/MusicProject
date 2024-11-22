@@ -23,10 +23,10 @@ export default function HomePage () {
         {isDesktop && <Background />}
         <About />
         {isMobile && <PriceMobile />}
-        {isNonMobile && <Review />}
         {isTablet && <Information />}
         {isDesktop && <Information />}
-        {isDesktop && <Suggestion />}
+        <Review />
+        {/* {isDesktop && <Suggestion />} */}
     </>
     )
 }

@@ -17,7 +17,7 @@ export default function AboutPage () {
         <AboutSummary />
         <Review />
         {isNonMobile && <Information />}
-        {isDesktop && <Suggestion />}
+        {/* {isDesktop && <Suggestion />} */}
         </>
     )
 }

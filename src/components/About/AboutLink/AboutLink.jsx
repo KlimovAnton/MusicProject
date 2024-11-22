@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import css from './AboutLink.module.css';
-import img1 from '../../../assets/wine-photo-2.jpg';
-import img2 from '../../../assets/beach-photo-own.jpg';
+import img1 from '../../../assets/swiper/23/wine-photo-2-about.jpg';
+import img2 from '../../../assets/swiper/23/beach-photo-own-tabl.jpg';
 
 export default function AboutLink () {
     return (

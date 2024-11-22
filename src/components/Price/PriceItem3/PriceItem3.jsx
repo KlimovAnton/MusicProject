@@ -1,6 +1,6 @@
 import css from './PriceItem3.module.css';
 import Button from '../../Button/Button';
-import img from '../../../assets/swiper/wine-photo-2.jpg';
+import img from '../../../assets/swiper/23/photo_2024-11-06_09-00-59.jpg';
 import { useMedia } from 'react-use';
 
 export default function PriceItem3 () {

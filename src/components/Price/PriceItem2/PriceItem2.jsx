@@ -1,6 +1,6 @@
 import css from './PriceItem2.module.css';
 import Button from '../../Button/Button';
-import img from '../../../assets/swiper/beach-photo-6.jpg';
+import img from '../../../assets/swiper/BEBDE289-6610-404F-8AEC-C400CCCACE7B.jpg';
 import { useMedia } from 'react-use';
 
 export default function PriceItem2 () {

@@ -1,6 +1,6 @@
 import css from './PriceItem.module.css';
 import Button from '../../Button/Button';
-import img from '../../../assets/swiper/BEBDE289-6610-404F-8AEC-C400CCCACE7B.jpg';
+import img from '../../../assets/swiper/23/IMG_8641.jpg';
 
 import { useMedia } from 'react-use';
 

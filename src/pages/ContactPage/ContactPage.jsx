@@ -15,7 +15,7 @@ export default function ContactPage () {
         <>
         <Contact />
         <Review />
-        {isDesktop && <Suggestion />}
+        {/* {isDesktop && <Suggestion />} */}
         </>
     )
 }

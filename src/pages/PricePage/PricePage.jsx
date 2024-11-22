@@ -15,8 +15,8 @@ export default function PricePage () {
         <>
         <Price />
         <Information />
-        <Review />
-        {isDesktop && <Suggestion />}
+        {/* <Review /> */}
+        {/* {isDesktop && <Suggestion />} */}
         </>
     )
 }

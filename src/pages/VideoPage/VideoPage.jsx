@@ -15,8 +15,8 @@ export default function VideoPage () {
         <>
         <Video />
         <Information />
-        <Review />
-        {isDesktop && <Suggestion />}
+        {/* <Review /> */}
+        {/* {isDesktop && <Suggestion />} */}
         </>
     )
 }
