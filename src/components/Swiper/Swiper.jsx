@@ -40,9 +40,9 @@ export default function Swiperr () {
           768: { slidesPerView: 3.25, slidesPerGroup: 1 },
           1280: { slidesPerView: 5, slidesPerGroup: 1, spaceBetween: 20, speed: 900 },
         }}>
-          <SwiperSlide><img src={img8} alt="photo-concerts" width="100%" height="100%"/></SwiperSlide>
           <SwiperSlide><img src={img3} alt="photo-concerts" width="100%" height="100%"/></SwiperSlide>
           <SwiperSlide><img src={img6} alt="photo-concerts" width="100%" height="100%"/></SwiperSlide>
+          <SwiperSlide><img src={img8} alt="photo-concerts" width="100%" height="100%"/></SwiperSlide>
           <SwiperSlide><img src={img4} alt="photo-concerts" width="100%" height="100%"/></SwiperSlide>
           <SwiperSlide><img src={img5} alt="photo-concerts" width="100%" height="100%"/></SwiperSlide>
           <SwiperSlide><img src={img7} alt="photo-concerts" width="100%" height="100%"/></SwiperSlide>
