@@ -3,7 +3,6 @@ import Button from '../Button/Button';
 
 export default function BackgroundTablet () {
     return (
-        <section className='section'>
             <div className={css.background}>
                 <div className={css.overlay}>
                     <div className={css.container}>
@@ -15,6 +14,5 @@ export default function BackgroundTablet () {
                     </div>
                 </div> 
             </div>
-        </section>
     )
 }
