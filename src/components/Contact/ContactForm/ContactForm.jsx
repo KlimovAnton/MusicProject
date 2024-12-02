@@ -6,7 +6,6 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import ButtonSend from '../../ButtonSend/ButtonSend';
 import { FormValidation } from '../../../Validation/ValidationForm';
 
-
 export default function ContactForm () {
 
     const initialValues = {
@@ -40,7 +39,7 @@ export default function ContactForm () {
                             name="email"
                             autoComplete="off"
                             required
-                            placeholder="mail@mail.com"
+                            placeholder="event@mail.com"
                         />
                         <ErrorMessage className={css.error} name="email" component="span" />
                         
@@ -63,7 +62,6 @@ export default function ContactForm () {
                             required
                             placeholder="43 677 00000000"/>
                         <ErrorMessage className={css.error} name="phone" component="span" />
-
                         <ButtonSend type="submit" disabled={!(formik.dirty && formik.isValid)}>Send</ButtonSend>
                     </Form>
                 )
