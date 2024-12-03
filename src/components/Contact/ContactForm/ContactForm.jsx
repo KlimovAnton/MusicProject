@@ -5,7 +5,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import { fetchForm } from '../../../send-form.js';
 
 import ButtonSend from '../../ButtonSend/ButtonSend';
-import { FormValidation } from '../../../Validation/ValidationForm';
+import { FormValidation } from '../../../Validation/ValidationForm.js';
 
 export default function ContactForm () {
 
