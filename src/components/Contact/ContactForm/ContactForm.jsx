@@ -2,20 +2,31 @@ import css from './ContactForm.module.css';
 import clsx from 'clsx';
 
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import { fetchForm } from '../../../send-form.js';
 
 import ButtonSend from '../../ButtonSend/ButtonSend';
 import { FormValidation } from '../../../Validation/ValidationForm';
 
 export default function ContactForm () {
 
+    async function getForm(value) {
+        try {
+            const data = await fetchForm(value);
+            console.log(data)
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
     const initialValues = {
       email: "",
       name: "",
       phone: "",
     };
-
+    
     const handleSubmit = async (value, actions) => {
         console.log(value)
+        await getForm(value);
         actions.resetForm();
     };
 
