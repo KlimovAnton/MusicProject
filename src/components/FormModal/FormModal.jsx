@@ -1,13 +1,12 @@
-import Modal from "react-modal";
-import MobileMenu from "../MobileMenu/MobileMenu";
+import ReactModal from "react-modal";
+import css from "./FormModal.module.css";
+import FormModalComponent from "../FormModalComponent/FormModalComponent";
 
-import css from "./MenuModal.module.css";
+ReactModal.setAppElement('#root');
 
-Modal.setAppElement("#root");
-
-export default function MenuModal({ onClose }) {
+export default function FormModal ({ onClose }) {
   return (
-    <Modal
+    <ReactModal
       isOpen={true}
       overlayClassName={{
         base: css.modalContainer,
@@ -21,7 +20,7 @@ export default function MenuModal({ onClose }) {
       }}
       closeTimeoutMS={500}
       onRequestClose={onClose}>
-      <MobileMenu onClose={onClose} />
-    </Modal>
+    <FormModalComponent onClose={onClose} />
+    </ReactModal>
   );
 }

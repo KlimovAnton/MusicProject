@@ -3,16 +3,27 @@ import clsx from 'clsx';
 
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { fetchForm } from '../../../send-form.js';
+import { useState } from 'react';
 
 import ButtonSend from '../../ButtonSend/ButtonSend';
 import { FormValidation } from '../../../Validation/ValidationForm.js';
+import FormModal from '../../FormModal/FormModal';
 
 export default function ContactForm () {
 
-    async function getForm(value) {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const openModal = () => {
+        setIsOpen(true);
+    }
+
+    const closeModal = () => {
+        setIsOpen(false)
+    }
+
+    function getForm(value) {
         try {
-            const data = await fetchForm(value);
-            console.log(data)
+            const data = fetchForm(value);
         } catch (error) {
             console.log(error)
         }
@@ -25,9 +36,9 @@ export default function ContactForm () {
     };
     
     const handleSubmit = async (value, actions) => {
-        console.log(value)
-        await getForm(value);
         actions.resetForm();
+        openModal();
+        // await getForm(value);
     };
 
     return (
@@ -78,6 +89,7 @@ export default function ContactForm () {
                 )
             }}
           </Formik>
+          {isOpen && <FormModal isOpen={setIsOpen} onClose={closeModal} />}
         </div>
     )
 }

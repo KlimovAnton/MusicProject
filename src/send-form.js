@@ -10,7 +10,6 @@ export const fetchForm = async (value) => {
             phone: value.phone,
         }
     })
-    console.log(response)
     return response.data;   
 }
 
