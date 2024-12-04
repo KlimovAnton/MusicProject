@@ -221,3 +221,7 @@ img {
     display: none;
   }
 }
+
+.react-international-phone-country-selector-button__button-content {
+  padding: 0 0 0 10px;
+}

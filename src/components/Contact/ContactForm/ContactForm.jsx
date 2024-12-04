@@ -1,95 +1,104 @@
 import css from './ContactForm.module.css';
 import clsx from 'clsx';
 
-import { Formik, Form, Field, ErrorMessage } from "formik";
-import { fetchForm } from '../../../send-form.js';
+import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
 import { useState } from 'react';
+import { PhoneInput } from 'react-international-phone';
+import 'react-international-phone/style.css';
 
+import CustomInput from '../../Input/CustomInput';
 import ButtonSend from '../../ButtonSend/ButtonSend';
-import { FormValidation } from '../../../Validation/ValidationForm.js';
-import FormModal from '../../FormModal/FormModal';
+import { FormValidation } from '../../../Validation/ValidationForm';
 
 export default function ContactForm () {
+   
+    const { register, handleSubmit, formState: { errors, isDirty, isValid } } = useForm({
+        mode: 'onChange',
+        resolver: yupResolver(FormValidation),
+    });
+    const onSubmit = data => console.log(data);
 
-    const [isOpen, setIsOpen] = useState(false);
+    const [phone, setPhone] = useState('');
 
-    const openModal = () => {
-        setIsOpen(true);
-    }
+    // const handleSubmit = (evt) => {
+    //     evt.preventDefault();
 
-    const closeModal = () => {
-        setIsOpen(false)
-    }
+    //     const form = evt.target;
+    //     const { email, name, message } = form.elements;
 
-    function getForm(value) {
-        try {
-            const data = fetchForm(value);
-        } catch (error) {
-            console.log(error)
-        }
-    }
+    //     console.log(email.value, name.value, message.value)
+    //     form.reset();
+    // }
 
-    const initialValues = {
-      email: "",
-      name: "",
-      phone: "",
-    };
     
-    const handleSubmit = async (value, actions) => {
-        actions.resetForm();
-        openModal();
-        // await getForm(value);
-    };
 
     return (
         <div className={css.containerForm}>
             <h2 className={css.title}>Fill out this form:</h2>
-            <Formik
-                initialValues={initialValues}
-                onSubmit={handleSubmit}
-                validationSchema={FormValidation}
-                validateOnMount
-                >
-            {formik => {
-                return (
-                    <Form className={css.form} autoComplete="off">
-                        <label className={css.label}>Your Email</label>
-                        <Field
-                            className={clsx(css.input, css.inputError)}
-                            label="Email"
-                            type="email"
-                            name="email"
-                            autoComplete="off"
-                            required
-                            placeholder="event@mail.com"
-                        />
-                        <ErrorMessage className={css.error} name="email" component="span" />
-                        
-                        <label className={css.label}>Your Name</label>
-                        <Field
-                            className={clsx(css.input, css.inputError)}
-                            label="Name"
-                            name="name"
-                            autoComplete="current-name"
-                            required
-                            placeholder="Andrew Neiman"
-                        />
-                        <ErrorMessage className={css.error} name="name" component="span" />
-                        
-                        <label className={css.label}>Your Phone</label>
-                        <Field
-                            className={clsx(css.input, css.inputError)}
-                            label="Phone"
+            <form className={css.form}
+            onSubmit={handleSubmit(onSubmit)}>
+                <CustomInput 
+                label={true}
+                labelName="Your Email"
+                inputType="email"
+                name="email"
+                labelClass={css.label}
+                inputClass={clsx(css.input, errors.email && css.inputError)}
+                placeholder="event@mail.com"
+                {...register("email", {
+                    onBlur: () => {},
+                    onFocus: () => {},
+                  })}
+                />
+                {errors.email && (
+                    <span className={css.error}>{errors.email.message}</span>
+                )}
+                <CustomInput 
+                label={true}
+                labelName="Your Name"
+                inputType="text"
+                name="name"
+                labelClass={css.label}
+                inputClass={clsx(css.input, errors.name && css.inputError)}
+                placeholder="Andrew Neiman"
+                {...register("name", {
+                    onBlur: () => {},
+                    onFocus: () => {},
+                  })}
+                />
+                {errors.name && (
+                    <span className={css.error}>{errors.name.message}</span>
+                )}
+                
+                <label className={css.label}>Your Phone</label>
+                        <PhoneInput
+                            label={true}
+                            labelName="Your Phone"
                             name="phone"
                             required
-                            placeholder="43 677 00000000"/>
-                        <ErrorMessage className={css.error} name="phone" component="span" />
-                        <ButtonSend type="submit" disabled={!(formik.dirty && formik.isValid)}>Send</ButtonSend>
-                    </Form>
-                )
-            }}
-          </Formik>
-          {isOpen && <FormModal isOpen={setIsOpen} onClose={closeModal} />}
+                            defaultCountry="at"
+                            value={phone}
+                            onChange={(phone) => setPhone(phone)}
+                            className={css.customInput}
+                            placeholder='+43 677 62014408'
+                            style={{
+                                "--react-international-phone-background-color":"#3b3b3b",
+                                "--react-international-phone-text-color": "white",
+                                "--react-international-phone-border-radius": "15px",
+                                "--react-international-phone-height": "50px",
+                                "--react-international-phone-border-color": "#3b3b3b",
+                            }}
+                            {...register("phone", {
+                                onBlur: () => {},
+                                onFocus: () => {},
+                              })}
+                            /> 
+                {errors.phone && (
+                    <span className={css.error}>{errors.phone.message}</span>
+                )}
+                <ButtonSend type="submit" >Send</ButtonSend>
+            </form>
         </div>
     )
 }
