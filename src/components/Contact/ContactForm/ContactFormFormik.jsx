@@ -4,8 +4,8 @@ import clsx from 'clsx';
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { fetchForm } from '../../../send-form.js';
 import { useState } from 'react';
-import { PhoneInput } from 'react-international-phone';
-import 'react-international-phone/style.css';
+
+import CustomNumberField from './CustomNumberField.jsx';
 
 import ButtonSend from '../../ButtonSend/ButtonSend';
 import { FormValidation } from '../../../Validation/ValidationForm.js';
@@ -39,9 +39,10 @@ export default function ContactForm () {
     };
     
     const handleSubmit = async (value, actions) => {
+        console.log(value)
         actions.resetForm();
-        openModal();
-        await getForm(value);
+        // openModal();
+        // await getForm(value);
     };
 
     return (
@@ -69,24 +70,14 @@ export default function ContactForm () {
                         <ErrorMessage className={css.error} name="name" component="span" />
                         
                         <label className={css.label}>Your Phone</label>
-                        <PhoneInput
+                        <Field
+                            className={clsx(css.input, css.inputError)}
                             label="Phone"
                             name="phone"
-                            required
-                            defaultCountry="at"
-                            value={phone}
-                            onChange={(phone) => setPhone(phone)}
-                            className={css.customInput}
-                            placeholder='+43 677 62014408'
-                            style={{
-                                "--react-international-phone-background-color":"#3b3b3b",
-                                "--react-international-phone-text-color": "white",
-                                "--react-international-phone-border-radius": "15px",
-                                "--react-international-phone-height": "50px",
-                                "--react-international-phone-border-color": "#3b3b3b",
-                            }}
-                            /> 
-                        
+                            autoComplete="current-name"
+                            component={CustomNumberField}
+                        />
+
                         <label className={css.label}>Your Email</label>
                         <Field
                             className={clsx(css.input, css.inputError)}

@@ -38,13 +38,23 @@
 }
 
 .error {
-color: var(--error-color);
-font-size: 12px;
-font-weight: 400;
-line-height: 1;
-letter-spacing: -1%;
-margin-top: 0;
-margin-left: 10px;
+    color: var(--error-color);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -1%;
+    margin-top: 0;
+    margin-left: 10px;
+}
+
+.errorPhone {
+    color: var(--error-color);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -1%;
+    margin-top: 0;
+    margin-left: 10px;
 }
   
 .label {
@@ -84,7 +94,3 @@ input:-webkit-autofill {
 -webkit-box-shadow: 0 0 0px 1000px #3b3b3b inset;
 -webkit-text-fill-color: white !important;
 }
-
-
-  
- 

@@ -1,0 +1,42 @@
+.label {
+    display: block;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 129%;
+    letter-spacing: -0.01em;
+    color: white;
+  }
+  
+  .input {
+    display: block;
+    width: auto;
+    padding: 16px;
+    border: none;
+    border-radius: 15px;
+  
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 129%;
+    letter-spacing: -0.01em;
+  
+    color: white;
+  
+    outline: none;
+    background-color: #3b3b3b;
+    transition: all var(--transition-delay) var(--transition);
+}
+
+.customInput {
+    border-radius: 15px;
+    background-color: #3b3b3b;
+}
+
+.error {
+  color: var(--error-color);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -1%;
+  margin-top: 0;
+  margin-left: 10px;
+}

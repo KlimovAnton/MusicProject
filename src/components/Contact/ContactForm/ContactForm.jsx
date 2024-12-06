@@ -2,103 +2,96 @@ import css from './ContactForm.module.css';
 import clsx from 'clsx';
 
 import { useForm } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers/yup';
+import { useRef } from 'react';
 import { useState } from 'react';
-import { PhoneInput } from 'react-international-phone';
-import 'react-international-phone/style.css';
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from "yup";
 
-import CustomInput from '../../Input/CustomInput';
+import CustomPhoneInput from './../../CustomPhoneInput/CustomPhoneInput'
 import ButtonSend from '../../ButtonSend/ButtonSend';
-import { FormValidation } from '../../../Validation/ValidationForm';
+import FormModal from '../../FormModal/FormModal';
+import { fetchForm } from '../../../send-form';
 
 export default function ContactForm () {
-   
-    const { register, handleSubmit, formState: { errors, isDirty, isValid } } = useForm({
-        mode: 'onChange',
-        resolver: yupResolver(FormValidation),
-    });
-    const onSubmit = data => console.log(data);
+    const ref = useRef(null);
 
-    const [phone, setPhone] = useState('');
+    const schema = yup.object({
+        name: yup.string().required("Name is required"),
+        email: yup.string().email("Email format is not valid").required("Email is required")
+    })
 
-    // const handleSubmit = (evt) => {
-    //     evt.preventDefault();
+    const { register, control, handleSubmit, formState, reset } = useForm({mode: 'onSubmit', resolver: yupResolver(schema)});
+    const { errors } = formState;
 
-    //     const form = evt.target;
-    //     const { email, name, message } = form.elements;
+    const [isOpen, setIsOpen] = useState(false);
 
-    //     console.log(email.value, name.value, message.value)
-    //     form.reset();
-    // }
+    const openModal = () => {
+        setIsOpen(true);
+    }
 
-    
+    const closeModal = () => {
+        setIsOpen(false)
+    }
+
+    function getForm(value) {
+        try {
+            const data = fetchForm(value);
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+    const onSubmit = async (data) => {
+        console.log('Form submitted', data);
+        reset();
+        openModal();
+        await getForm(data);
+    }
 
     return (
         <div className={css.containerForm}>
             <h2 className={css.title}>Fill out this form:</h2>
-            <form className={css.form}
-            onSubmit={handleSubmit(onSubmit)}>
-                <CustomInput 
-                label={true}
-                labelName="Your Email"
-                inputType="email"
-                name="email"
-                labelClass={css.label}
-                inputClass={clsx(css.input, errors.email && css.inputError)}
-                placeholder="event@mail.com"
-                {...register("email", {
-                    onBlur: () => {},
-                    onFocus: () => {},
-                  })}
-                />
-                {errors.email && (
-                    <span className={css.error}>{errors.email.message}</span>
-                )}
-                <CustomInput 
-                label={true}
-                labelName="Your Name"
-                inputType="text"
-                name="name"
-                labelClass={css.label}
-                inputClass={clsx(css.input, errors.name && css.inputError)}
+            <form
+                className={css.form}
+                onSubmit={handleSubmit(onSubmit)}
+                noValidate
+            >
+
+                <label className={css.label}>Your name</label>
+                <input
+                type="text"
+                id="name"
                 placeholder="Andrew Neiman"
-                {...register("name", {
-                    onBlur: () => {},
-                    onFocus: () => {},
-                  })}
+                {...register("name")}
+                className={css.input}
                 />
-                {errors.name && (
-                    <span className={css.error}>{errors.name.message}</span>
-                )}
-                
-                <label className={css.label}>Your Phone</label>
-                        <PhoneInput
-                            label={true}
-                            labelName="Your Phone"
-                            name="phone"
-                            required
-                            defaultCountry="at"
-                            value={phone}
-                            onChange={(phone) => setPhone(phone)}
-                            className={css.customInput}
-                            placeholder='+43 677 62014408'
-                            style={{
-                                "--react-international-phone-background-color":"#3b3b3b",
-                                "--react-international-phone-text-color": "white",
-                                "--react-international-phone-border-radius": "15px",
-                                "--react-international-phone-height": "50px",
-                                "--react-international-phone-border-color": "#3b3b3b",
-                            }}
-                            {...register("phone", {
-                                onBlur: () => {},
-                                onFocus: () => {},
-                              })}
-                            /> 
-                {errors.phone && (
-                    <span className={css.error}>{errors.phone.message}</span>
-                )}
-                <ButtonSend type="submit" >Send</ButtonSend>
+                <span className={css.error}>{errors.name?.message}</span>
+
+                <label className={css.label}>Your phone</label>
+                <CustomPhoneInput 
+                ref={ref}
+                type="tel"
+                id="phone"
+                {...register("phone")}
+                />
+                <span className={css.error}>{errors.phone?.message}</span>
+
+                <label className={css.label}>Your email</label>
+                <input
+                type="email"
+                id="email"
+                placeholder="event@example.com"
+                {...register("email")}
+                className={css.input}
+                />
+                <span className={css.error}>{errors.email?.message}</span>
+
+            <ButtonSend type="submit" >Send</ButtonSend>
             </form>
+            {isOpen && <FormModal isOpen={setIsOpen} onClose={closeModal} />}
         </div>
     )
 }
+
+
+// /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
