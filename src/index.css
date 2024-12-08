@@ -265,3 +265,8 @@ img {
   background: #f1f1f1;
   border-radius: 15px 0 0 15px;
 }
+
+.react-tel-input .flag-dropdown.open .selected-flag:focus {
+  background: #f1f1f1;
+  border-radius: 15px 0 0 15px;
+}
