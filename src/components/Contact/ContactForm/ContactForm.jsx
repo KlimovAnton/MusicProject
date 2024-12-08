@@ -77,13 +77,13 @@ export default function ContactForm () {
                 <span className={css.error}>{errors.name?.message}</span>
 
                 <label className={css.label}>Your phone</label>
-                {/* <CustomPhoneInput 
+                <CustomPhoneInput 
                 ref={ref}
                 type="tel"
                 id="phone"
                 {...register("phone")}
                 />
-                <span className={css.error}>{errors.phone?.message}</span> */}
+                <span className={css.error}>{errors.phone?.message}</span>
 
                 <Controller
                         name="phone"
