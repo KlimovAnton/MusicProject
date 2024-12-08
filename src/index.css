@@ -257,13 +257,13 @@ img {
 } */
 
 .react-tel-input .flag-dropdown.open .selected-flag {
-  z-index: 3;
+  z-index: 1;
   background: #f1f1f1;
   border-radius: 15px 0 0 15px;
 }
 
 .react-tel-input .selected-flag:hover, .react-tel-input .selected-flag:focus {
-  z-index: 3;
+  z-index: 1;
   background: #f1f1f1;
   border-radius: 15px 0 0 15px;
 }
