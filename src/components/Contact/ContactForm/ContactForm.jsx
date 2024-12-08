@@ -1,5 +1,4 @@
 import css from './ContactForm.module.css';
-import clsx from 'clsx';
 
 import { useForm, Controller } from 'react-hook-form';
 import { useRef } from 'react';
@@ -7,16 +6,12 @@ import { useState } from 'react';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 
-import CustomPhoneInput from './../../CustomPhoneInput/CustomPhoneInput'
 import ButtonSend from '../../ButtonSend/ButtonSend';
 import FormModal from '../../FormModal/FormModal';
 import { fetchForm } from '../../../send-form';
 
-// import 'react-phone-number-input/style.css'
-// import PhoneInput from 'react-phone-number-input'
-
-import PhoneInput from 'react-phone-input-2'
-import 'react-phone-input-2/lib/style.css'
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css';
 
 export default function ContactForm () {
     const ref = useRef(null);
@@ -77,13 +72,6 @@ export default function ContactForm () {
                 <span className={css.error}>{errors.name?.message}</span>
 
                 <label className={css.label}>Your phone</label>
-                <CustomPhoneInput 
-                ref={ref}
-                type="tel"
-                id="phone"
-                {...register("phone")}
-                />
-                <span className={css.error}>{errors.phone?.message}</span>
 
                 <Controller
                         name="phone"
