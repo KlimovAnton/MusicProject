@@ -111,7 +111,11 @@ export default function ContactForm () {
                                 "border": "none",
                             }}
                             dropdownStyle={{
-                                "color": "black"
+                                "color": "black",
+                                "borderRadius": "15px"
+                            }}
+                            dropdownStyle:focus={{
+                                "borderRadius": "15px"
                             }}
                             />
                         )}
